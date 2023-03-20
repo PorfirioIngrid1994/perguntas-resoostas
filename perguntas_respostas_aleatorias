@@ -1,0 +1,38 @@
+perguntas = {
+"Qual o nome da organela citoplasmática responsável pela respiração celular em células animais?": {
+"a": "mitossomo",
+"b": "mitocôndria",
+"c": "ribossomo",
+"resposta": "b"
+},
+"Qual o número do livro Eclesiastes na bíblia? ": {
+"a": "21",
+"b": "5",
+"c": "10",
+"resposta": "a"
+},
+"O Palmeiras tem mundial?": {
+"a": "Não, não tem!",
+"b": "Todo mundo sabe que não!",
+"c": "Inquestionável que sim",
+"resposta": "c"
+}
+}
+
+acertos = 0
+erros = 0
+
+for pergunta, opcoes in perguntas.items():
+print(pergunta)
+for opcao, resposta in opcoes.items():
+if opcao != "resposta":
+print(f"{opcao}: {resposta}")
+resposta_usuario = input("Sua resposta: ")
+if resposta_usuario == opcoes["resposta"]:
+print("Aeeee, acertou!")
+acertos += 1
+else:
+print("Negativo, pense um pouco mais...")
+erros += 1
+
+print(f"Você acertou {acertos} perguntas e errou {erros}.")
